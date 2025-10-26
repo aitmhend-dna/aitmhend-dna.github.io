@@ -136,6 +136,15 @@
         <section class="card">
             <h2>Send Me a Message</h2>
             
+            <!-- Success message (shown after form submission) -->
+            <div id="success-message" class="success-alert" style="display: none;">
+                <h3>✅ Message Sent Successfully!</h3>
+                <p>Thank you for your message! I've received it and will respond within a few days. I'm excited to connect with fellow heritage enthusiasts!</p>
+                <button onclick="showForm()" class="btn btn-outline" style="margin-top: 1rem;">
+                    <span>📝</span> Send Another Message
+                </button>
+            </div>
+            
             <form action="https://formspree.io/f/myzbzgjn" method="POST" class="contact-form" id="contactForm">
                 <div class="form-group">
                     <label for="name">Full Name *</label>
@@ -149,8 +158,10 @@
                     <small id="email-help" class="form-help">I'll use this to respond to your message</small>
                 </div>
                 
-                <!-- Hidden field for Formspree -->
+                <!-- Hidden fields for Formspree configuration -->
                 <input type="hidden" name="_subject" value="New message from Amazigh Heritage website">
+                <input type="hidden" name="_next" value="https://brbousnguar.github.io/aitmhend-dna.github.io/contact.html?sent=true">
+                <input type="hidden" name="_cc" value="ait.mhend.dna@gmail.com">
 
                 <div class="form-group">
                     <label for="affiliation">Institution/Affiliation</label>
@@ -279,6 +290,18 @@
         document.addEventListener('DOMContentLoaded', function() {
             const form = document.getElementById('contactForm');
             const submitBtn = form.querySelector('button[type="submit"]');
+            const successMessage = document.getElementById('success-message');
+            
+            // Check if user returned after successful submission
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('sent') === 'true') {
+                successMessage.style.display = 'block';
+                form.style.display = 'none';
+                // Remove the parameter from URL without page reload
+                window.history.replaceState({}, document.title, window.location.pathname);
+                // Scroll to success message
+                successMessage.scrollIntoView({ behavior: 'smooth' });
+            }
             
             form.addEventListener('submit', function(e) {
                 // Basic validation feedback
@@ -328,6 +351,17 @@
                 });
             });
         });
+        
+        // Function to show form again after success
+        function showForm() {
+            const form = document.getElementById('contactForm');
+            const successMessage = document.getElementById('success-message');
+            
+            successMessage.style.display = 'none';
+            form.style.display = 'block';
+            form.reset(); // Clear all form fields
+            form.scrollIntoView({ behavior: 'smooth' });
+        }
     </script>
 </body>
 </html>
