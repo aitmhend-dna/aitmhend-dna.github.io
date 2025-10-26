@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://brbousnguar.github.io/aitmhend-dna.github.io/</loc>
+    <lastmod>2025-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://brbousnguar.github.io/aitmhend-dna.github.io/img/E-PF2546-map.png</image:loc>
+      <image:title>E-M81 Berber Marker Distribution Across North Africa</image:title>
+      <image:caption>Geographic distribution of the E-M81 "Berber Marker" showing concentration in Maghreb region</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Complete Lineage Analysis -->
+  <url>
+    <loc>https://brbousnguar.github.io/aitmhend-dna.github.io/lineage.html</loc>
+    <lastmod>2025-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://brbousnguar.github.io/aitmhend-dna.github.io/img/E-PF2546-distribution.png</image:loc>
+      <image:title>E-PF2546 Geographic Distribution Chart</image:title>
+      <image:caption>E-PF2546 subclade distribution showing highest concentrations in Mauritania, Western Sahara, and Morocco</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://brbousnguar.github.io/aitmhend-dna.github.io/img/map-h-haplo.png</image:loc>
+      <image:title>H1 Haplogroup Distribution and Migration Patterns</image:title>
+      <image:caption>H1 haplogroup distribution showing prehistoric migration from Franco-Cantabrian refuge to North Africa</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Contact Page -->
+  <url>
+    <loc>https://brbousnguar.github.io/aitmhend-dna.github.io/contact.html</loc>
+    <lastmod>2025-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- CSS File (for completeness) -->
+  <url>
+    <loc>https://brbousnguar.github.io/aitmhend-dna.github.io/styles.css</loc>
+    <lastmod>2025-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>
