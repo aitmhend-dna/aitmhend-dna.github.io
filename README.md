@@ -1,72 +1,35 @@
-# Amazigh Lineage Heritage - GitHub Pages Site
+# Amazigh Lineage Heritage
 
-This repository contains a comprehensive analysis of an Amazigh lineage from the Souss-Massa region of Morocco, presented as a modern, responsive website.
+A comprehensive digital presentation of an Amazigh lineage from the Souss-Massa region of Morocco, combining genetic research, historical analysis, and cultural preservation.
 
-## About
+## About This Repository
 
-This site presents a multi-disciplinary analysis combining:
-- Genetic research (Y-DNA and mtDNA haplogroups)
-- Historical documentation
-- Anthropological studies
-- Cultural preservation
+This GitHub Pages website presents a multi-disciplinary analysis of a specific Chtouka confederation lineage, exploring the convergence of ancient African and European ancestral streams in southwestern Morocco.
 
-## Site Structure
+### Research Focus
 
-- `index.html` - Homepage with welcome message and Souss-Massa overview
-- `lineage.html` - Complete lineage analysis
-- `styles.css` - Modern, responsive styling
-- `history-my-lineage.txt` - Original research document
+- **Genetic Analysis**: Y-DNA haplogroup E-PF2546 and mtDNA haplogroup H1-T16189C!
+- **Historical Context**: Political and cultural evolution of the Souss-Massa region
+- **Anthropological Study**: Chtouka tribal confederation heritage and traditions
+- **Cultural Documentation**: Tachelhit language, Argan ecosystem, and Amazigh customs
 
-## Features
+### Geographic Scope
 
-- Responsive design optimized for all devices
-- Modern CSS with custom color scheme reflecting Amazigh heritage
-- Accessible typography and navigation
-- Timeline visualizations
-- Data tables for genetic information
-- Image placeholders for future visual content
+The research centers on the **Souss-Massa region** of Morocco, specifically:
+- Chtouka-Aït Baha Province
+- Traditional Chtouka confederation territory
+- Souss Valley between the Atlas Mountains and Atlantic Ocean
 
-## Viewing the Site
+## Repository Contents
 
-Visit the live site at: https://brbousnguar.github.io/aitmhend-dna.github.io
+- **Website Files**: Complete responsive HTML/CSS/JavaScript site
+- **Research Images**: Genetic distribution maps and haplogroup visualizations
+- **Documentation**: Original lineage analysis and historical research
 
-## Visual Content Recommendations
+## Live Website
 
-To replace the current SVG placeholders with actual images, consider these sources:
-
-### 📸 **Recommended Images**
-- **Souss Valley landscapes** - Aerial views showing Atlas Mountains and Argan forests
-- **Chtouka traditional architecture** - Berber villages and kasbahs
-- **Argan trees and ecosystem** - Close-ups of Argania spinosa and traditional harvesting
-- **Genetic visualization** - Haplogroup distribution maps from research papers
-- **Historical artifacts** - Tifinagh scripts, traditional textiles, archaeological sites
-- **Cultural elements** - Traditional weaving, pottery, agricultural practices
-
-### 🔗 **Free Image Sources**
-- **Unsplash** - Search "Morocco Atlas Mountains", "Berber village", "Argan trees"
-- **Wikimedia Commons** - Historical maps, archaeological photos, cultural documentation
-- **Research Papers** - Many genetic studies include distribution maps (with proper attribution)
-- **UNESCO** - Argan Biosphere Reserve documentation
-- **Morocco Tourism Board** - Official regional photographs
-
-### 🎨 **Current Visual Elements**
-- SVG-based geographic representations
-- CSS-generated genetic diagrams  
-- Animated DNA helixes
-- Interactive timeline visualizations
-- Responsive design elements
-
-## Future Enhancements
-
-- [ ] Replace SVG placeholders with high-quality photographs
-- [ ] Add interactive genetic maps with clickable regions
-- [ ] Include historical photographs and archaeological evidence
-- [ ] Develop multimedia timeline with audio narration
-- [ ] Add genealogical tree visualizations with family connections
-- [ ] Implement search functionality across genetic and historical data
-- [ ] Create downloadable research summaries and citations
+Visit: **https://brbousnguar.github.io/aitmhend-dna.github.io**
 
 ---
 
-*Preserving and sharing Amazigh heritage through modern digital storytelling*
-My research on Amazigh DNA, history, and personal lineage analysis.
+*Preserving Amazigh heritage through scientific research and digital storytelling*
