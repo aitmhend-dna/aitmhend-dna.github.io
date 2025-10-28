@@ -34,6 +34,32 @@
     </image:image>
   </url>
   
+  <!-- Genetics Revolution Page -->
+  <url>
+    <loc>https://brbousnguar.github.io/aitmhend-dna.github.io/genetics.html</loc>
+    <lastmod>2025-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://brbousnguar.github.io/aitmhend-dna.github.io/img/E-PF2546-map.png</image:loc>
+      <image:title>DNA Revolution in Human Migration Studies</image:title>
+      <image:caption>How modern DNA sequencing revolutionizes our understanding of human migration patterns and ancient history</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Cultural Heritage Page -->
+  <url>
+    <loc>https://brbousnguar.github.io/aitmhend-dna.github.io/culture.html</loc>
+    <lastmod>2025-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://brbousnguar.github.io/aitmhend-dna.github.io/img/E-PF2546-map.png</image:loc>
+      <image:title>Souss-Massa Cultural Heritage and Amazigh Traditions</image:title>
+      <image:caption>Rich cultural heritage of Souss-Massa region from ancient Amazigh confederations to modern traditions</image:caption>
+    </image:image>
+  </url>
+  
   <!-- Contact Page -->
   <url>
     <loc>https://brbousnguar.github.io/aitmhend-dna.github.io/contact.html</loc>
