@@ -1,6 +1,16 @@
 # Amazigh Lineage Heritage
 
+**Last Updated: January 2026**
+
 A comprehensive digital presentation of an Amazigh lineage from the Souss-Massa region of Morocco, combining genetic research, historical analysis, and cultural preservation.
+
+## Latest Updates (January 2026)
+
+### Recent Research Integration
+- **Refined Y-DNA Dating**: Updated E-PF2546 formation to precisely 2,400 years BP (~400 BCE) based on 2025 whole Y-chromosome sequencing studies
+- **Maternal Lineage Precision**: Refined H1-T16189C! arrival timeline to 9,500-10,800 years ago, incorporating 2025 ancient North African DNA studies from Iberomaurusian sites
+- **Ancient DNA Discoveries**: Added recent 2023-2025 North African aDNA samples confirming prehistoric Iberian-Maghrebi gene flow
+- **DNA Technology Updates**: Reflected current state of consumer genomics (sequencing costs now $50-200, completion in minutes to hours)
 
 ## About This Repository
 
