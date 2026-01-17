@@ -144,80 +144,51 @@
     <main id="main-content" class="container" role="main">
         <!-- Hero Section -->
         <section class="hero" itemscope itemtype="https://schema.org/WebPageElement">
-            <div class="hero-overlay">
-                <svg class="hero-dna" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 400" style="position: absolute; right: 10%; top: 20%; width: 60px; height: 200px; opacity: 0.3;" role="img" aria-label="DNA double helix illustration">
-                    <path d="M20 0 Q40 50 20 100 Q0 150 20 200 Q40 250 20 300 Q0 350 20 400" stroke="white" stroke-width="2" fill="none"/>
-                    <path d="M80 0 Q60 50 80 100 Q100 150 80 200 Q60 250 80 300 Q100 350 80 400" stroke="white" stroke-width="2" fill="none"/>
-                    <g stroke="white" stroke-width="1">
-                        <line x1="20" y1="25" x2="80" y2="25"/>
-                        <line x1="20" y1="75" x2="80" y2="75"/>
-                        <line x1="20" y1="125" x2="80" y2="125"/>
-                        <line x1="20" y1="175" x2="80" y2="175"/>
-                        <line x1="20" y1="225" x2="80" y2="225"/>
-                        <line x1="20" y1="275" x2="80" y2="275"/>
-                        <line x1="20" y1="325" x2="80" y2="325"/>
-                        <line x1="20" y1="375" x2="80" y2="375"/>
-                    </g>
-                </svg>
+            <!-- Hero Background Image Placeholder -->
+            <div class="hero-background" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; opacity: 0.15;">
+                <!-- 
+                MIDJOURNEY PROMPT FOR HERO BACKGROUND:
+                "DNA double helix structure merged with ancient moroccan geometric patterns, atlas mountains silhouette, 
+                warm sunset colors blending with blue DNA strands, scientific illustration style, high detail, 
+                abstract background, 8k, professional scientific photography --ar 16:9 --v 6"
+                
+                Replace this div with: <img src="img/hero-dna-morocco.jpg" alt="DNA Heritage Background" style="width: 100%; height: 100%; object-fit: cover;">
+                -->
+                <img src="img/hero-dna-morocco.jpg" alt="DNA Heritage Background - Scientific visualization" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
-            <h1 itemprop="headline">Welcome to the <span class="highlight">Souss-Massa</span> Heritage Project</h1>
-            <p>Discover the fascinating story of an ancient Amazigh lineage that bridges two continents and spans millennia. Through cutting-edge genetic analysis, historical research, and anthropological studies, we uncover the remarkable journey of the Chtouka confederation.</p>
-            <a href="lineage.html" class="btn">Explore My Lineage</a>
-            <a href="#souss-massa" class="btn btn-outline">Learn About Souss-Massa</a>
+            
+            <div style="position: relative; z-index: 1;">
+                <h1 itemprop="headline">Welcome to the <span class="highlight">Souss-Massa</span> Heritage Project</h1>
+                <p>Discover the fascinating story of an ancient Amazigh lineage that bridges two continents and spans millennia. Through cutting-edge genetic analysis, historical research, and anthropological studies, we uncover the remarkable journey of the Chtouka confederation.</p>
+                <a href="lineage.html" class="btn">Explore My Lineage</a>
+                <a href="#souss-massa" class="btn btn-outline">Learn About Souss-Massa</a>
+            </div>
         </section>
 
         <!-- Souss-Massa Overview -->
         <section id="souss-massa" class="card" itemscope itemtype="https://schema.org/Place">
             <h2 itemprop="name">The Souss-Massa Region</h2>
+            
+            <!-- Souss-Massa Landscape Image -->
+            <div class="featured-image" style="margin: 2rem 0;">
+                <img src="img/souss-valley-landscape.jpg" alt="Souss-Massa Valley - Panoramic view with Atlas Mountains and argan forests" style="width: 100%; height: 450px; object-fit: cover; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                <p style="text-align: center; margin-top: 1rem; font-style: italic; color: #666; font-size: 0.95rem;">
+                    <strong>📍 Souss-Massa Region:</strong> Traditional territory of the Chtouka confederation between the Atlas Mountains and Atlantic Ocean
+                </p>
+            </div>
+            
             <meta itemprop="addressCountry" content="MA">
             <meta itemprop="addressRegion" content="Souss-Massa">
             <div itemprop="geo" itemscope itemtype="https://schema.org/GeoCoordinates">
                 <meta itemprop="latitude" content="30.3333">
                 <meta itemprop="longitude" content="-9.2333">
             </div>
-            <div class="map-container">
-                <svg class="region-map" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" style="width: 100%; height: 200px; background: linear-gradient(to bottom, #87CEEB 0%, #F4A460 40%, #8FBC8F 100%); border-radius: 8px;">
-                    <!-- Atlas Mountains -->
-                    <path d="M0 80 Q50 40 100 60 Q150 30 200 50 Q250 20 300 40 Q350 30 400 50 L400 80 Z" fill="#8B4513" opacity="0.8"/>
-                    <path d="M0 100 Q50 60 100 80 Q150 50 200 70 Q250 40 300 60 Q350 50 400 70 L400 100 Z" fill="#A0522D" opacity="0.6"/>
-                    
-                    <!-- Souss Valley -->
-                    <rect x="50" y="120" width="300" height="40" fill="#90EE90" opacity="0.7" rx="5"/>
-                    
-                    <!-- Argan Forest -->
-                    <circle cx="80" cy="140" r="8" fill="#228B22" opacity="0.6"/>
-                    <circle cx="120" cy="135" r="6" fill="#228B22" opacity="0.6"/>
-                    <circle cx="160" cy="145" r="7" fill="#228B22" opacity="0.6"/>
-                    <circle cx="200" cy="140" r="9" fill="#228B22" opacity="0.6"/>
-                    <circle cx="240" cy="138" r="6" fill="#228B22" opacity="0.6"/>
-                    <circle cx="280" cy="142" r="8" fill="#228B22" opacity="0.6"/>
-                    <circle cx="320" cy="139" r="7" fill="#228B22" opacity="0.6"/>
-                    
-                    <!-- Atlantic Coast -->
-                    <rect x="0" y="160" width="400" height="40" fill="#4682B4" opacity="0.6"/>
-                    
-                    <!-- Labels -->
-                    <text x="200" y="35" text-anchor="middle" font-size="12" fill="white" font-weight="bold">High Atlas Mountains</text>
-                    <text x="200" y="140" text-anchor="middle" font-size="14" fill="#2F4F4F" font-weight="bold">Souss Valley - Chtouka Territory</text>
-                    <text x="200" y="180" text-anchor="middle" font-size="12" fill="white" font-weight="bold">Atlantic Ocean</text>
-                    
-                    <!-- Compass -->
-                    <g transform="translate(350, 30)">
-                        <circle cx="0" cy="0" r="15" fill="white" opacity="0.8"/>
-                        <path d="M0,-12 L4,0 L0,12 L-4,0 Z" fill="#8B0000"/>
-                        <text x="0" y="-18" text-anchor="middle" font-size="8" fill="#333">N</text>
-                    </g>
-                </svg>
-                <p style="text-align: center; margin-top: 10px; font-style: italic; color: #666;">
-                    <strong>📍 Souss-Massa Region:</strong> Traditional territory of the Chtouka confederation between the Atlas Mountains and Atlantic Ocean
-                </p>
-            </div>
             
             <p class="text-large mb-2">
                 The <strong>Souss-Massa</strong> is a fertile region in southwestern Morocco, nestled between the High Atlas Mountains and the Atlantic Ocean. This ancient valley has been the heartland of Amazigh civilization for millennia, serving as a crossroads of cultures and a center of indigenous resistance and autonomy.
             </p>
 
-            <div class="grid">
+            <div class="grid" style="gap: 2rem; align-items: start;">
                 <div>
                     <h3>🏔️ Geography & Climate</h3>
                     <p>The Souss Valley stretches approximately 230 kilometers from the Atlas foothills to the Atlantic coast. Fed by the Souss River, this fertile plain contrasts sharply with the arid landscapes of the surrounding mountains and desert.</p>
@@ -227,6 +198,8 @@
                 </div>
                 
                 <div>
+                    <img src="img/atlas-mountains.jpg" alt="High Atlas Mountains overlooking the Souss Valley" style="width: 100%; height: 280px; object-fit: cover; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); margin-bottom: 1.5rem;">
+                    
                     <h3>🏛️ Historical Significance</h3>
                     <p>The Souss was the birthplace of the great Berber dynasties - the Almoravids and Almohads - who ruled an empire stretching from Spain to sub-Saharan Africa during the medieval period.</p>
                     
@@ -235,49 +208,9 @@
                 </div>
             </div>
 
-            <div class="argan-landscape">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 150" style="width: 100%; height: 150px; background: linear-gradient(to bottom, #87CEEB 0%, #F5DEB3 100%); border-radius: 8px;">
-                    <!-- Ground -->
-                    <rect x="0" y="120" width="600" height="30" fill="#DEB887"/>
-                    
-                    <!-- Argan Trees -->
-                    <g>
-                        <!-- Tree 1 -->
-                        <rect x="48" y="100" width="4" height="20" fill="#8B4513"/>
-                        <circle cx="50" cy="85" r="20" fill="#228B22" opacity="0.8"/>
-                        <circle cx="45" cy="80" r="15" fill="#32CD32" opacity="0.6"/>
-                        
-                        <!-- Tree 2 -->
-                        <rect x="148" y="95" width="4" height="25" fill="#8B4513"/>
-                        <circle cx="150" cy="80" r="25" fill="#228B22" opacity="0.8"/>
-                        <circle cx="155" cy="75" r="18" fill="#32CD32" opacity="0.6"/>
-                        
-                        <!-- Tree 3 -->
-                        <rect x="248" y="98" width="4" height="22" fill="#8B4513"/>
-                        <circle cx="250" cy="82" r="22" fill="#228B22" opacity="0.8"/>
-                        <circle cx="245" cy="77" r="16" fill="#32CD32" opacity="0.6"/>
-                        
-                        <!-- Tree 4 -->
-                        <rect x="348" y="100" width="4" height="20" fill="#8B4513"/>
-                        <circle cx="350" cy="85" r="20" fill="#228B22" opacity="0.8"/>
-                        <circle cx="355" cy="80" r="15" fill="#32CD32" opacity="0.6"/>
-                        
-                        <!-- Tree 5 -->
-                        <rect x="448" y="96" width="4" height="24" fill="#8B4513"/>
-                        <circle cx="450" cy="78" r="24" fill="#228B22" opacity="0.8"/>
-                        <circle cx="445" cy="73" r="17" fill="#32CD32" opacity="0.6"/>
-                    </g>
-                    
-                    <!-- Mountains in background -->
-                    <path d="M0 80 Q100 40 200 60 Q300 30 400 50 Q500 35 600 55 L600 120 L0 120 Z" fill="#8B7D6B" opacity="0.4"/>
-                    
-                    <!-- Sun -->
-                    <circle cx="500" cy="30" r="20" fill="#FFD700" opacity="0.8"/>
-                    
-                    <!-- Text -->
-                    <text x="300" y="140" text-anchor="middle" font-size="14" fill="#8B4513" font-weight="bold">Sacred Argan Forest - Endemic to the Souss-Massa</text>
-                </svg>
-                <p style="text-align: center; margin-top: 10px; font-style: italic; color: #666;">
+            <div class="argan-landscape" style="margin: 2rem 0;">
+                <img src="img/argan-forest.jpg" alt="Ancient argan forest ecosystem in Souss Valley" style="width: 100%; height: 300px; object-fit: cover; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.15);">
+                <p style="text-align: center; margin-top: 1rem; font-style: italic; color: #666; font-size: 0.95rem;">
                     <strong>🌳 Argan Ecosystem:</strong> The unique Argania spinosa trees that have sustained Amazigh communities for millennia
                 </p>
             </div>
@@ -286,6 +219,25 @@
         <!-- Lineage Overview -->
         <section class="card">
             <h2>A Tale of Two Ancestries</h2>
+            
+            <!-- Genetic Heritage Visual -->
+            <div class="heritage-visual" style="margin: 2rem 0; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                <div>
+                    <!-- 
+                    MIDJOURNEY PROMPT FOR PATERNAL LINE:
+                    "Ancient North African berber warrior in traditional dress, iron age morocco, sahara desert background, 
+                    DNA helix overlaid in blue, scientific illustration meets historical art, warm earth tones, 
+                    detailed portrait, national geographic style --ar 3:4 --v 6"
+                    
+                    Replace with: <img src="img/paternal-heritage.jpg" alt="Paternal E-PF2546 Heritage">
+                    -->
+                    <img src="img/paternal-heritage.jpg" alt="Paternal E-PF2546 Heritage - North African Lineage" style="width: 100%; height: 400px; object-fit: cover; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                </div>
+                <div>
+                    <img src="img/maternal-heritage.jpg" alt="Maternal H1-T16189C! Heritage - European Genetic Lineage" style="width: 100%; height: 400px; object-fit: cover; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                </div>
+            </div>
+            
             <p class="text-large">
                 This genetic heritage tells the story of two distinct ancestral streams converging in the heart of Morocco:
             </p>
@@ -313,6 +265,24 @@
 
         <!-- Key Findings -->
         <section class="card">
+            <!-- DNA Analysis Banner Image -->
+            <div style="margin: -2.5rem -2.5rem 2rem -2.5rem; height: 200px; position: relative; overflow: hidden; border-radius: 16px 16px 0 0;">
+                <!-- 
+                MIDJOURNEY PROMPT:
+                "Scientific DNA sequencing visualization, blue and cyan glowing strands, genetic data streams, 
+                laboratory equipment in background, high-tech research facility, modern scientific photography, 
+                professional lighting, 8k detail --ar 21:9 --v 6"
+                
+                Replace with: <img src="img/dna-analysis-banner.jpg" alt="DNA Analysis" style="width: 100%; height: 100%; object-fit: cover;">
+                -->
+                <div style="width: 100%; height: 100%; background: linear-gradient(135deg, rgba(37, 99, 235, 0.9) 0%, rgba(6, 182, 212, 0.9) 100%); display: flex; align-items: center; justify-content: center;">
+                    <div style="color: white; text-align: center;">
+                        <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🔬</div>
+                        <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.8rem; font-weight: 700;">Key Genetic Findings</div>
+                    </div>
+                </div>
+            </div>
+            
             <h2>Key Genetic Findings</h2>
             
             <!-- Recent Updates Banner -->
