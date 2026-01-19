@@ -80,7 +80,7 @@ This is a scientific research website documenting Amazigh (Berber) genetic herit
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns#">
 <head>
-  - Meta tags (SEO optimized, 50-60 char titles, 150-160 char descriptions)
+  - Meta tags (SEO optimized, 40-50 char titles, 150-160 char descriptions)
   - Open Graph tags
   - Structured data (JSON-LD)
   - CSS and scripts
@@ -91,12 +91,24 @@ This is a scientific research website documenting Amazigh (Berber) genetic herit
   - <nav> with active state
   - Breadcrumb navigation (schema.org)
   - <main id="main-content" role="main">
-    - Sections with .card class
-    - Semantic HTML5 elements
+  - Sections with .card class
+  - Semantic HTML5 elements
   - <footer role="contentinfo">
 </body>
 </html>
 ```
+
+### Background & Visual Hierarchy
+- **Body background:** Clean `#FAFBFC` (light gray) - no patterns
+- **Card background:** Pure white `#FFFFFF` for contrast
+- **Visual depth:** Subtle shadows create clear hierarchy
+- **Spacing:** Generous padding and margins for breathing room
+
+### Container & Layout Width
+- **Max-width:** `1200px` (reduced from 1400px for better readability)
+- **Padding:** `4rem` left/right on desktop, `3rem` on tablet, `2rem` on mobile, `1.5rem` on small mobile
+- **Margins:** Content centered with generous side margins for comfortable reading
+- **Header/Nav padding:** `4rem` left/right to match container
 
 ### Card Component
 ```html
@@ -108,11 +120,13 @@ This is a scientific research website documenting Amazigh (Berber) genetic herit
 ```
 
 **Card Styling:**
-- White background
+- White background (`#FFFFFF`)
+- Border: `1px solid` with subtle shadow
 - Padding: `2.5rem`
-- Border radius: `6px`
-- Box shadow: `var(--shadow-md)`
-- Margin bottom: `3rem` between cards
+- Border radius: `12px`
+- Box shadow: Subtle `0 1px 3px` with hover elevation
+- Margin bottom: `2.5rem` between cards (optimized spacing)
+- Hover: Elevates with `translateY(-2px)` and stronger shadow
 
 ### Grid Layouts
 ```html
@@ -126,6 +140,44 @@ This is a scientific research website documenting Amazigh (Berber) genetic herit
 - 3-column: `repeat(3, 1fr)`
 - Auto-fit: `repeat(auto-fit, minmax(250px, 1fr))`
 - Gap: `2rem` standard
+
+### Filter Section Layout
+```html
+<div class="content-with-filters">
+  <aside class="filter-section">
+    <!-- Filters: search, tags, dropdowns -->
+  </aside>
+  <main class="content-main">
+    <!-- Main content with additional padding -->
+  </main>
+</div>
+```
+
+**Alternative with learning-layout class:**
+```html
+<div class="learning-layout">
+  <!-- Main content section with professional padding -->
+</div>
+```
+
+**Filter Section:**
+- Width: `350px` on desktop (wider for better filter usability)
+- Width: `320px` on tablets (900px-1024px breakpoint)
+- Stacks above content on mobile/tablet (<900px)
+- Uses `.filter-section` class with search, tags, and dropdowns
+- Padding: `2.5rem` desktop, `1.5rem` mobile
+- Gap between filter and content: `3rem` desktop, `2.5rem` tablet
+- Responsive breakpoints:
+  - Desktop (>1024px): `350px` sidebar with `3rem` gap
+  - Tablet (900-1024px): `320px` sidebar with `2.5rem` gap
+  - Mobile (<900px): Full width, stacked above content
+
+**Main Content Padding (for professional layout):**
+- Use `.learning-layout` or `.content-main` class for main content sections
+- Adds `1.5rem` left/right padding on desktop
+- Adds `1rem` on tablet, `0.5rem` on mobile
+- Creates professional spacing between filter sidebar and main content
+- Helps content breathe and improves readability
 
 ### Image Patterns
 ```html
@@ -153,11 +205,15 @@ This is a scientific research website documenting Amazigh (Berber) genetic herit
 ```
 
 **Button Styling:**
-- Primary: Background `#CD7F32`, white text
-- Outline: Border `#CD7F32`, transparent background
-- Padding: `0.75rem 1.5rem`
-- Border radius: `6px`
-- Hover: Slight scale or shadow increase
+- Primary: Gradient background `linear-gradient(135deg, #CD7F32 0%, #CC8E35 100%)`
+- Outline: Border `2px solid #CD7F32`, transparent background
+- Padding: `0.875rem 1.75rem`
+- Border radius: `8px`
+- Font size: `1rem`, weight `600`
+- Min-height: `44px` (ensures accessibility touch target)
+- Mobile: Maintains `44px` min-height, padding `0.875rem 1.5rem`
+- Hover: Elevates with `translateY(-2px)` and enhanced shadow
+- Transition: Smooth `cubic-bezier(0.4, 0, 0.2, 1)` animation
 
 ---
 
@@ -237,10 +293,10 @@ This is a scientific research website documenting Amazigh (Berber) genetic herit
 ## 🎯 SEO PATTERNS
 
 ### Title Tags
-- Length: 50-60 characters
-- Format: "Primary Keyword | Secondary Keyword | Brand"
+- Length: 40-50 characters (optimized for better display)
+- Format: "Primary Keyword | Secondary Keyword"
 - Include main topic and location when relevant
-- Example: "Amazigh DNA Heritage | E-PF2546 & H1 Research | Chtouka"
+- Example: "Amazigh DNA Heritage | E-PF2546 & H1 Research"
 
 ### Meta Descriptions
 - Length: 150-160 characters
