@@ -45,6 +45,15 @@
     --radius-xl: 8px;
     
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Legacy aliases used across older page sections */
+    --primary-color: var(--primary-terracotta);
+    --secondary-color: var(--accent-ochre);
+    --accent-color: var(--primary-clay);
+    --background-color: var(--background);
+    --border-radius: var(--radius-md);
+    --shadow: var(--shadow-md);
+    --primary-navy: var(--deep-indigo);
 }
 
 * {
@@ -87,7 +96,7 @@ header::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('img/berber-pattern-bg.jpg');
+    background-image: url('../img/berber-pattern-bg.jpg');
     background-size: 150px 150px;
     opacity: 0.08;
     pointer-events: none;
@@ -126,7 +135,7 @@ header::before {
 }
 
 /* Navigation */
-nav {
+.main-nav {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(20px) saturate(180%);
     border-bottom: 1px solid var(--border);
@@ -137,7 +146,7 @@ nav {
     transition: all 0.3s ease;
 }
 
-nav:hover {
+.main-nav:hover {
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
@@ -385,7 +394,7 @@ main#main-content {
         rgba(30, 58, 95, 0.92) 50%, 
         rgba(37, 99, 235, 0.88) 100%
     ),
-    url('img/berber-pattern-bg.jpg');
+    url('../img/berber-pattern-bg.jpg');
     background-size: cover, 200px 200px;
     background-position: center, center;
     background-blend-mode: overlay;
@@ -3633,3 +3642,4 @@ select:focus {
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+

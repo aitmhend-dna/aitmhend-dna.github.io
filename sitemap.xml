@@ -113,12 +113,4 @@
     <priority>0.7</priority>
   </url>
   
-  <!-- CSS File (for completeness) -->
-  <url>
-    <loc>https://aitmhend-dna.github.io/css/styles.css</loc>
-    <lastmod>2026-02-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
-  </url>
-
 </urlset>
