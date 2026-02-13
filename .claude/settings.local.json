@@ -2,7 +2,12 @@
   "permissions": {
     "allow": [
       "Bash(wc:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "WebSearch",
+      "WebFetch(domain:www.nature.com)",
+      "WebFetch(domain:pubmed.ncbi.nlm.nih.gov)",
+      "WebFetch(domain:www.yfull.com)",
+      "WebFetch(domain:en.wikipedia.org)"
     ]
   }
 }
