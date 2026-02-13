@@ -59,7 +59,52 @@
       <image:caption>Rich cultural heritage of Souss-Massa region from ancient Amazigh confederations to modern traditions</image:caption>
     </image:image>
   </url>
-  
+
+  <!-- Research Blog Page -->
+  <url>
+    <loc>https://aitmhend-dna.github.io/research.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://aitmhend-dna.github.io/img/E-PF2546-map.png</image:loc>
+      <image:title>Research Blog - North African Genetic Studies</image:title>
+      <image:caption>Summaries of peer-reviewed research on Amazigh genetics and North African population history</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Research Article: Green Sahara Ancient DNA -->
+  <url>
+    <loc>https://aitmhend-dna.github.io/research/green-sahara-ancient-dna-2025.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Research Article: North African Mitogenomes -->
+  <url>
+    <loc>https://aitmhend-dna.github.io/research/north-african-mitogenomes-2025.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Research Article: Neolithic Iberia-Morocco Migration -->
+  <url>
+    <loc>https://aitmhend-dna.github.io/research/neolithic-iberia-morocco-2023.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Research Article: E-M183 Recent Origin -->
+  <url>
+    <loc>https://aitmhend-dna.github.io/research/e-m183-recent-origin-2018.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- Contact Page -->
   <url>
     <loc>https://aitmhend-dna.github.io/contact.html</loc>
