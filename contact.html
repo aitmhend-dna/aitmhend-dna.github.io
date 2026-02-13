@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns#">
 <head>
     <meta charset="UTF-8">
@@ -206,14 +206,6 @@
                     <small id="message-help" class="form-help">Tell me about your heritage journey, questions, or discoveries</small>
                 </div>
 
-                <div class="form-group">
-                    <label class="checkbox-label">
-                        <input type="checkbox" id="newsletter" name="newsletter" value="yes">
-                        <span class="checkmark"></span>
-                        You may contact me about follow-up updates related to this message (no mailing list)
-                    </label>
-                </div>
-
                 <div class="form-actions">
                     <button type="submit" class="btn btn-primary">
                         <span>📧</span> Send Message
@@ -225,13 +217,57 @@
 
                 <div class="form-note">
                     <p><strong>Note:</strong> This form sends messages directly to my inbox. If you prefer, you can also email me directly at <a href="mailto:ait.mhend.dna@gmail.com">ait.mhend.dna@gmail.com</a></p>
-                    <p><small>I typically respond within a few days. The optional checkbox above only allows follow-up on this conversation and does not subscribe you to a newsletter.</small></p>
+                    <p><small>I typically respond within a few days. For ongoing updates about new research posts, use the separate updates signup below.</small></p>
                 </div>
                 
                 <!-- Fallback for form issues -->
                 <div class="form-fallback" style="display: none; background: #fff3cd; border: 1px solid #ffeaa7; padding: 1rem; border-radius: var(--border-radius); margin-top: 1rem;">
                     <h4>Having trouble with the form?</h4>
                     <p>You can email me directly at: <a href="mailto:ait.mhend.dna@gmail.com?subject=Heritage Inquiry&body=Hi! I'm reaching out about your Amazigh heritage research...">ait.mhend.dna@gmail.com</a></p>
+                </div>
+            </form>
+        </section>
+
+        <!-- Research Updates Signup -->
+        <section class="card">
+            <h2 style="border-left: 4px solid #CD7F32; padding-left: 1rem;">Research Updates</h2>
+            <p class="text-large">If you want occasional updates when new research summaries are published, subscribe here. This is separate from the contact form.</p>
+
+            <div id="updates-success-message" class="success-alert" style="display: none;">
+                <h3>Subscription Received</h3>
+                <p>Thanks. I will send occasional updates when new research summaries are added.</p>
+                <button onclick="showUpdatesForm()" class="btn btn-outline" style="margin-top: 1rem;">
+                    Update Email Preference
+                </button>
+            </div>
+
+            <form action="https://formspree.io/f/myzbzgjn" method="POST" class="contact-form" id="updatesForm">
+                <input type="hidden" name="_subject" value="Research updates signup from website">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="submission_type" value="updates_signup">
+
+                <div class="form-group">
+                    <label for="updates-email">Email Address *</label>
+                    <input type="email" id="updates-email" name="email" required aria-describedby="updates-email-help">
+                    <small id="updates-email-help" class="form-help">Used only for research update emails</small>
+                </div>
+
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="updates-consent" name="consent" value="yes" required>
+                        <span class="checkmark"></span>
+                        I agree to receive occasional research update emails
+                    </label>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary" id="updates-submit-btn">
+                        Subscribe to Updates
+                    </button>
+                </div>
+
+                <div class="form-note">
+                    <p><small>No marketing emails. You can unsubscribe anytime by replying with "unsubscribe" to any update email.</small></p>
                 </div>
             </form>
         </section>
@@ -265,7 +301,7 @@
         <section class="card privacy-notice">
             <h2>🔒 Privacy & Respect</h2>
             <p>
-                I respect your privacy and treat all communications confidentially. Your contact information is used only to respond to your messages and won't be shared with anyone else. If you opt in for follow-up updates, that applies only to your current conversation.
+                I respect your privacy and treat all communications confidentially. Contact form details are used only to respond to your message. Updates signup emails are used only to send occasional research updates. I do not share your information.
             </p>
             <p>
                 <strong>Personal Approach:</strong> As an individual researcher, I handle all correspondence personally and respectfully. 
@@ -284,46 +320,44 @@
             const form = document.getElementById('contactForm');
             const submitBtn = form.querySelector('button[type="submit"]');
             const successMessage = document.getElementById('success-message');
-            
-            // Check if user returned after successful submission
+
+            const updatesForm = document.getElementById('updatesForm');
+            const updatesSubmitBtn = document.getElementById('updates-submit-btn');
+            const updatesSuccessMessage = document.getElementById('updates-success-message');
+
             const urlParams = new URLSearchParams(window.location.search);
             if (urlParams.get('sent') === 'true') {
                 successMessage.style.display = 'block';
                 form.style.display = 'none';
-                // Remove the parameter from URL without page reload
                 window.history.replaceState({}, document.title, window.location.pathname);
-                // Scroll to success message
                 successMessage.scrollIntoView({ behavior: 'smooth' });
             }
-            
+
             form.addEventListener('submit', function(e) {
-                e.preventDefault(); // Prevent default form submission
-                
-                // Basic validation feedback
+                e.preventDefault();
+
                 const requiredFields = form.querySelectorAll('[required]');
                 let isValid = true;
-                
+
                 requiredFields.forEach(field => {
-                    if (!field.value.trim()) {
+                    const value = field.type === 'checkbox' ? field.checked : field.value.trim();
+                    if (!value) {
                         field.classList.add('error');
                         isValid = false;
                     } else {
                         field.classList.remove('error');
                     }
                 });
-                
+
                 if (!isValid) {
                     alert('Please fill in all required fields.');
                     return false;
                 }
-                
-                // Form submission feedback
-                submitBtn.innerHTML = '<span>📤</span> Sending...';
+
+                submitBtn.innerHTML = 'Sending...';
                 submitBtn.disabled = true;
-                
-                // Submit form via AJAX
+
                 const formData = new FormData(form);
-                
                 fetch(form.action, {
                     method: 'POST',
                     body: formData,
@@ -333,7 +367,6 @@
                 })
                 .then(response => {
                     if (response.ok) {
-                        // Success - show success message
                         successMessage.style.display = 'block';
                         form.style.display = 'none';
                         successMessage.scrollIntoView({ behavior: 'smooth' });
@@ -341,43 +374,145 @@
                         throw new Error('Network response was not ok');
                     }
                 })
-                .catch(error => {
-                    // Error - show error message and re-enable form
+                .catch(() => {
                     alert('There was an error sending your message. Please try again or email me directly at ait.mhend.dna@gmail.com');
-                    submitBtn.innerHTML = '<span>📧</span> Send Message';
+                    submitBtn.innerHTML = 'Send Message';
                     submitBtn.disabled = false;
                 });
             });
-            
-            // Real-time validation feedback
+
             form.querySelectorAll('input, textarea, select').forEach(field => {
                 field.addEventListener('blur', function() {
-                    if (this.hasAttribute('required') && !this.value.trim()) {
+                    if (!this.hasAttribute('required')) {
+                        return;
+                    }
+                    const value = this.type === 'checkbox' ? this.checked : this.value.trim();
+                    if (!value) {
                         this.classList.add('error');
                     } else {
                         this.classList.remove('error');
                     }
                 });
-                
+
                 field.addEventListener('input', function() {
-                    if (this.classList.contains('error') && this.value.trim()) {
+                    if (this.classList.contains('error')) {
+                        const value = this.type === 'checkbox' ? this.checked : this.value.trim();
+                        if (value) {
+                            this.classList.remove('error');
+                        }
+                    }
+                });
+            });
+
+            updatesForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                const updatesRequiredFields = updatesForm.querySelectorAll('[required]');
+                let isUpdatesValid = true;
+
+                updatesRequiredFields.forEach(field => {
+                    const value = field.type === 'checkbox' ? field.checked : field.value.trim();
+                    if (!value) {
+                        field.classList.add('error');
+                        isUpdatesValid = false;
+                    } else {
+                        field.classList.remove('error');
+                    }
+                });
+
+                if (!isUpdatesValid) {
+                    alert('Please provide your email and consent to subscribe.');
+                    return false;
+                }
+
+                updatesSubmitBtn.textContent = 'Subscribing...';
+                updatesSubmitBtn.disabled = true;
+
+                const updatesFormData = new FormData(updatesForm);
+                fetch(updatesForm.action, {
+                    method: 'POST',
+                    body: updatesFormData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+                .then(response => {
+                    if (response.ok) {
+                        updatesSuccessMessage.style.display = 'block';
+                        updatesForm.style.display = 'none';
+                        updatesSuccessMessage.scrollIntoView({ behavior: 'smooth' });
+                    } else {
+                        throw new Error('Network response was not ok');
+                    }
+                })
+                .catch(() => {
+                    alert('There was an error subscribing. Please try again or email me directly at ait.mhend.dna@gmail.com');
+                    updatesSubmitBtn.textContent = 'Subscribe to Updates';
+                    updatesSubmitBtn.disabled = false;
+                });
+            });
+
+            updatesForm.querySelectorAll('input').forEach(field => {
+                field.addEventListener('blur', function() {
+                    if (!this.hasAttribute('required')) {
+                        return;
+                    }
+                    const value = this.type === 'checkbox' ? this.checked : this.value.trim();
+                    if (!value) {
+                        this.classList.add('error');
+                    } else {
                         this.classList.remove('error');
+                    }
+                });
+
+                field.addEventListener('input', function() {
+                    if (this.classList.contains('error')) {
+                        const value = this.type === 'checkbox' ? this.checked : this.value.trim();
+                        if (value) {
+                            this.classList.remove('error');
+                        }
+                    }
+                });
+
+                field.addEventListener('change', function() {
+                    if (this.classList.contains('error')) {
+                        const value = this.type === 'checkbox' ? this.checked : this.value.trim();
+                        if (value) {
+                            this.classList.remove('error');
+                        }
                     }
                 });
             });
         });
-        
-        // Function to show form again after success
+
         function showForm() {
             const form = document.getElementById('contactForm');
             const successMessage = document.getElementById('success-message');
-            
+            const submitBtn = form.querySelector('button[type="submit"]');
+
             successMessage.style.display = 'none';
             form.style.display = 'block';
-            form.reset(); // Clear all form fields
+            form.reset();
+            submitBtn.innerHTML = 'Send Message';
+            submitBtn.disabled = false;
             form.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function showUpdatesForm() {
+            const updatesForm = document.getElementById('updatesForm');
+            const updatesSuccessMessage = document.getElementById('updates-success-message');
+            const updatesSubmitBtn = document.getElementById('updates-submit-btn');
+
+            updatesSuccessMessage.style.display = 'none';
+            updatesForm.style.display = 'block';
+            updatesForm.reset();
+            updatesSubmitBtn.textContent = 'Subscribe to Updates';
+            updatesSubmitBtn.disabled = false;
+            updatesForm.scrollIntoView({ behavior: 'smooth' });
         }
     </script>
 </body>
 </html>
+
+
 
