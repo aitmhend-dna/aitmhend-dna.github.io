@@ -4016,6 +4016,75 @@ select:focus {
     color: #CC8E35;
 }
 
+/* ========================================
+   HOMEPAGE MAP FEATURE
+   ======================================== */
+
+.home-map-feature {
+    margin: 2.5rem 0;
+    border: 1px solid rgba(205, 127, 50, 0.2);
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(205, 127, 50, 0.05), rgba(204, 142, 53, 0.02));
+    padding: 1.25rem;
+}
+
+.home-map-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1.6fr;
+    gap: 1.25rem;
+    align-items: center;
+}
+
+.home-map-kicker {
+    display: inline-block;
+    font-size: 0.72rem;
+    color: #8B4513;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.home-map-title {
+    margin: 0 0 0.65rem;
+    font-size: 1.35rem;
+    color: #3E2723;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.home-map-copy {
+    margin: 0;
+    color: #475569;
+    line-height: 1.7;
+}
+
+.home-map-figure {
+    margin: 0;
+}
+
+.home-map-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    border: 1px solid rgba(62, 39, 35, 0.12);
+    background: #fff;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+.home-map-caption {
+    margin-top: 0.65rem;
+    font-size: 0.9rem;
+    color: #5b6473;
+    font-style: italic;
+}
+
+@media (max-width: 900px) {
+    .home-map-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 .btn-outline-sienna {
     border-color: #8B4513;
     color: #8B4513;
