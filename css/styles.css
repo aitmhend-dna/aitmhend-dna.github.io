@@ -1513,6 +1513,24 @@ img[alt] {
     top: 6px;
 }
 
+/* Skip link - alternate class name for same functionality */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: #CD7F32;
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 4px;
+    z-index: 1000;
+    transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+    top: 6px;
+}
+
 /* Enhanced focus indicators for accessibility */
 a:focus,
 button:focus,
