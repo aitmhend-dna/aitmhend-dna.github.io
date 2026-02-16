@@ -125,13 +125,11 @@
         <!-- Introduction -->
         <section class="card hero-genetics">
             <!-- Genetics Lab Banner -->
-            <div style="margin: -2.5rem -2.5rem 2rem -2.5rem; height: 300px; position: relative; overflow: hidden; border-radius: 6px 6px 0 0;">
-                <img src="img/sequencing-lab.jpg" alt="Modern genetics laboratory with DNA sequencing equipment used in human migration research and haplogroup analysis" width="1200" height="300" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
-                <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, rgba(205, 127, 50, 0.85) 0%, rgba(139, 69, 19, 0.8) 100%);"></div>
-                <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem;">
-                    <div style="text-align: center; color: white;">
-                        <h2 style="color: white; margin: 0; font-size: 2rem; font-family: 'Space Grotesk', sans-serif;">🧬 The Genetic Revolution: Rewriting Human History</h2>
-                    </div>
+            <div class="genetics-hero-banner">
+                <img class="genetics-hero-banner-image" src="img/sequencing-lab.jpg" alt="Modern genetics laboratory with DNA sequencing equipment used in human migration research and haplogroup analysis" width="1200" height="300" loading="lazy">
+                <div class="genetics-hero-banner-overlay"></div>
+                <div class="genetics-hero-banner-content">
+                    <h2 class="genetics-hero-title">The Genetic Revolution: Rewriting Human History</h2>
                 </div>
             </div>
             
@@ -139,34 +137,30 @@
                 We live in an extraordinary era where a tiny sample of saliva can reveal stories spanning tens of thousands of years. The DNA sequencing revolution has transformed from a decade-long, billion-dollar project to a process completed in minutes, fundamentally changing how we understand human history, migration, and our interconnected past. This technology has enabled detailed analysis of <a href="lineage.html">specific lineages</a> like the <a href="index.html">Amazigh Chtouka heritage</a>.
             </p>
             
-            <div class="stats-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin: 3rem 0;">
-                <div style="background: linear-gradient(to bottom right, rgba(205, 127, 50, 0.03), rgba(204, 142, 53, 0.06)); border: 1px solid rgba(205, 127, 50, 0.15); border-radius: 4px; padding: 2rem 1.5rem; position: relative; overflow: hidden;">
-                    <div style="position: absolute; top: 0; right: 0; width: 80px; height: 80px; background: linear-gradient(135deg, rgba(205, 127, 50, 0.08), transparent); border-radius: 0 0 0 100%;"></div>
-                    <div style="font-family: 'Space Grotesk', sans-serif; font-size: 3rem; font-weight: 700; color: #CD7F32; line-height: 1; margin-bottom: 0.5rem;">13</div>
-                    <div style="font-size: 0.875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: #8B4513; margin-bottom: 0.75rem;">Years</div>
-                    <div style="font-size: 1.125rem; font-weight: 600; color: #3E2723; margin-bottom: 0.5rem;">2003</div>
-                    <div style="font-size: 0.875rem; color: #666; line-height: 1.5;">Human Genome Project completion</div>
+            <div class="stats-grid genetics-stats-grid">
+                <div class="genetics-stat-card">
+                    <div class="genetics-stat-value">13</div>
+                    <div class="genetics-stat-label">Years</div>
+                    <div class="genetics-stat-title">2003</div>
+                    <div class="genetics-stat-copy">Human Genome Project completion</div>
                 </div>
-                <div style="background: linear-gradient(to bottom right, rgba(204, 142, 53, 0.03), rgba(210, 105, 30, 0.06)); border: 1px solid rgba(204, 142, 53, 0.15); border-radius: 4px; padding: 2rem 1.5rem; position: relative; overflow: hidden;">
-                    <div style="position: absolute; top: 0; right: 0; width: 80px; height: 80px; background: linear-gradient(135deg, rgba(204, 142, 53, 0.08), transparent); border-radius: 0 0 0 100%;"></div>
-                    <div style="font-family: 'Space Grotesk', sans-serif; font-size: 2.5rem; font-weight: 700; color: #CC8E35; line-height: 1; margin-bottom: 0.5rem;">$2.7B</div>
-                    <div style="font-size: 0.875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: #8B4513; margin-bottom: 0.75rem;">Investment</div>
-                    <div style="font-size: 1.125rem; font-weight: 600; color: #3E2723; margin-bottom: 0.5rem;">First Genome</div>
-                    <div style="font-size: 0.875rem; color: #666; line-height: 1.5;">Initial sequencing cost</div>
+                <div class="genetics-stat-card">
+                    <div class="genetics-stat-value">$2.7B</div>
+                    <div class="genetics-stat-label">Investment</div>
+                    <div class="genetics-stat-title">First Genome</div>
+                    <div class="genetics-stat-copy">Initial sequencing cost</div>
                 </div>
-                <div style="background: linear-gradient(to bottom right, rgba(210, 105, 30, 0.03), rgba(139, 69, 19, 0.06)); border: 1px solid rgba(210, 105, 30, 0.15); border-radius: 4px; padding: 2rem 1.5rem; position: relative; overflow: hidden;">
-                    <div style="position: absolute; top: 0; right: 0; width: 80px; height: 80px; background: linear-gradient(135deg, rgba(210, 105, 30, 0.08), transparent); border-radius: 0 0 0 100%;"></div>
-                    <div style="font-family: 'Space Grotesk', sans-serif; font-size: 2.5rem; font-weight: 700; color: #D2691E; line-height: 1; margin-bottom: 0.5rem;">2026</div>
-                    <div style="font-size: 0.875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: #8B4513; margin-bottom: 0.75rem;">Current Speed</div>
-                    <div style="font-size: 1.125rem; font-weight: 600; color: #3E2723; margin-bottom: 0.5rem;">Minutes</div>
-                    <div style="font-size: 0.875rem; color: #666; line-height: 1.5;">Modern whole genome sequencing</div>
+                <div class="genetics-stat-card">
+                    <div class="genetics-stat-value">2026</div>
+                    <div class="genetics-stat-label">Current Speed</div>
+                    <div class="genetics-stat-title">Minutes</div>
+                    <div class="genetics-stat-copy">Modern whole genome sequencing</div>
                 </div>
-                <div style="background: linear-gradient(to bottom right, rgba(139, 69, 19, 0.03), rgba(205, 127, 50, 0.06)); border: 1px solid rgba(139, 69, 19, 0.15); border-radius: 4px; padding: 2rem 1.5rem; position: relative; overflow: hidden;">
-                    <div style="position: absolute; top: 0; right: 0; width: 80px; height: 80px; background: linear-gradient(135deg, rgba(139, 69, 19, 0.08), transparent); border-radius: 0 0 0 100%;"></div>
-                    <div style="font-family: 'Space Grotesk', sans-serif; font-size: 2.5rem; font-weight: 700; color: #8B4513; line-height: 1; margin-bottom: 0.5rem;">$50</div>
-                    <div style="font-size: 0.875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: #8B4513; margin-bottom: 0.75rem;">Accessibility</div>
-                    <div style="font-size: 1.125rem; font-weight: 600; color: #3E2723; margin-bottom: 0.5rem;">Consumer Cost</div>
-                    <div style="font-size: 0.875rem; color: #666; line-height: 1.5;">DNA ancestry tests today</div>
+                <div class="genetics-stat-card">
+                    <div class="genetics-stat-value">$50</div>
+                    <div class="genetics-stat-label">Accessibility</div>
+                    <div class="genetics-stat-title">Consumer Cost</div>
+                    <div class="genetics-stat-copy">DNA ancestry tests today</div>
                 </div>
             </div>
         </section>
@@ -702,4 +696,5 @@
     </script>
 </body>
 </html>
+
 

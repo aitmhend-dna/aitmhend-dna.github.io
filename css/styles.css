@@ -1946,12 +1946,108 @@ select:focus {
 
 /* Genetics Page Specific Styles */
 .hero-genetics {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: white;
-    padding: 3rem 2rem;
-    text-align: center;
+    background: var(--surface);
+    color: var(--text-primary);
+    padding: 2.5rem;
+    text-align: left;
     position: relative;
     overflow: hidden;
+}
+
+.genetics-hero-banner {
+    margin: -2.5rem -2.5rem 2rem -2.5rem;
+    min-height: 300px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px 6px 0 0;
+}
+
+.genetics-hero-banner-image {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.genetics-hero-banner-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(180deg, rgba(17, 24, 39, 0.35) 0%, rgba(17, 24, 39, 0.55) 100%),
+        linear-gradient(135deg, rgba(205, 127, 50, 0.25) 0%, rgba(204, 142, 53, 0.15) 100%);
+}
+
+.genetics-hero-banner-content {
+    position: absolute;
+    inset-inline: 0;
+    bottom: 0;
+    padding: 2rem;
+    text-align: center;
+    z-index: 2;
+}
+
+.genetics-hero-title {
+    color: #fff;
+    margin: 0;
+    font-size: clamp(1.6rem, 3vw, 2rem);
+    font-family: 'Space Grotesk', sans-serif;
+    text-wrap: balance;
+}
+
+.genetics-stats-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.25rem;
+    margin: 2.5rem 0 0;
+}
+
+.genetics-stat-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    border: 1px solid rgba(148, 163, 184, 0.28);
+    border-radius: var(--radius-md);
+    padding: 1.5rem 1.25rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.genetics-stat-card::before {
+    content: '';
+    position: absolute;
+    inset: 0 auto auto 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-terracotta), var(--accent-ochre));
+}
+
+.genetics-stat-value {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(2rem, 4vw, 2.6rem);
+    font-weight: 700;
+    color: var(--primary-dark);
+    line-height: 1;
+    margin-bottom: 0.55rem;
+}
+
+.genetics-stat-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #7c3f12;
+    margin-bottom: 0.7rem;
+}
+
+.genetics-stat-title {
+    font-size: 1.08rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.45rem;
+}
+
+.genetics-stat-copy {
+    font-size: 0.9rem;
+    color: #4b5563;
+    line-height: 1.5;
 }
 
 .dna-animation {
@@ -3821,6 +3917,15 @@ select:focus {
     margin-bottom: 1rem;
 }
 
+.discovery-cover-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(62, 39, 35, 0.08);
+}
+
 .discovery-tag {
     font-size: 0.7rem;
     padding: 0.25rem 0.75rem;
@@ -3920,6 +4025,28 @@ select:focus {
 
 .article-section {
     margin-bottom: 2rem;
+}
+
+.article-hero-media {
+    padding: 0;
+    overflow: hidden;
+}
+
+.article-hero-image {
+    width: 100%;
+    max-height: 460px;
+    object-fit: cover;
+    display: block;
+}
+
+.article-hero-caption {
+    margin: 0;
+    padding: 0.75rem 1rem 0.9rem;
+    font-size: 0.82rem;
+    line-height: 1.5;
+    color: #6B7280;
+    background: rgba(205, 127, 50, 0.05);
+    border-top: 1px solid rgba(205, 127, 50, 0.2);
 }
 
 .article-section h3 {
@@ -4356,5 +4483,209 @@ select:focus {
 .image-container img {
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Genetics page polish overrides */
+.card.hero-genetics {
+    text-align: left;
+}
+
+.card.hero-genetics .text-large {
+    color: #374151;
+    max-width: 74ch;
+}
+
+.card.hero-genetics .genetics-stat-card:nth-child(2) .genetics-stat-value {
+    color: #b26f2b;
+}
+
+.card.hero-genetics .genetics-stat-card:nth-child(3) .genetics-stat-value {
+    color: #9a4b17;
+}
+
+.card.hero-genetics .genetics-stat-card:nth-child(4) .genetics-stat-value {
+    color: #6b3a1b;
+}
+
+@media (max-width: 900px) {
+    .genetics-hero-banner {
+        margin: -2rem -2rem 1.5rem;
+        min-height: 260px;
+    }
+
+    .genetics-hero-banner-image {
+        min-height: 260px;
+    }
+
+    .genetics-hero-banner-content {
+        padding: 1.5rem 1.25rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .card.hero-genetics {
+        padding: 1.5rem;
+    }
+
+    .genetics-hero-banner {
+        margin: -1.5rem -1.5rem 1.25rem;
+        min-height: 220px;
+    }
+
+    .genetics-hero-banner-image {
+        min-height: 220px;
+    }
+
+    .genetics-hero-title {
+        font-size: 1.35rem;
+    }
+
+    .genetics-stats-grid {
+        grid-template-columns: 1fr;
+        gap: 0.9rem;
+        margin-top: 1.75rem;
+    }
+}
+
+/* ========================================
+   2026 UX POLISH LAYER
+   ======================================== */
+
+:root {
+    /* Backfill legacy tokens used throughout older sections */
+    --primary-blue: #2C4251;
+    --accent-cyan: #2C7A7B;
+    --accent-teal: #2A9D8F;
+    --accent-emerald: #2F855A;
+    --highlight-color: #F2BE6F;
+    --genetic-helix: #386FA4;
+}
+
+body {
+    background:
+        radial-gradient(circle at 12% 12%, rgba(205, 127, 50, 0.07), transparent 34%),
+        radial-gradient(circle at 88% 8%, rgba(44, 66, 81, 0.08), transparent 30%),
+        #F7F8FA;
+}
+
+.main-nav {
+    background: rgba(255, 255, 255, 0.92);
+    border-bottom: 1px solid rgba(17, 24, 39, 0.08);
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+}
+
+.nav-container a {
+    border: 1px solid transparent;
+}
+
+.nav-container a:hover {
+    background: #F4F6F8;
+    border-color: rgba(44, 66, 81, 0.12);
+}
+
+.nav-container a.active {
+    background: linear-gradient(135deg, #B87333 0%, #8B4513 100%);
+    color: #FFFFFF;
+    box-shadow: 0 8px 18px rgba(139, 69, 19, 0.28);
+}
+
+.card {
+    border-color: rgba(17, 24, 39, 0.08);
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+.card:hover {
+    border-color: rgba(205, 127, 50, 0.28);
+    box-shadow: 0 14px 32px rgba(15, 23, 42, 0.1);
+}
+
+.card p,
+.card li {
+    color: #475569;
+}
+
+.card a {
+    color: #8B4513;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 2px;
+}
+
+.card a:hover {
+    color: #6A3410;
+}
+
+.card.hero-genetics {
+    background: linear-gradient(180deg, #FFFFFF 0%, #FCF8F1 100%);
+    border: 1px solid rgba(205, 127, 50, 0.2);
+}
+
+.genetics-hero-banner {
+    border-bottom: 1px solid rgba(205, 127, 50, 0.18);
+}
+
+.genetics-hero-banner-overlay {
+    background:
+        linear-gradient(180deg, rgba(17, 24, 39, 0.28) 0%, rgba(17, 24, 39, 0.52) 100%),
+        linear-gradient(120deg, rgba(205, 127, 50, 0.16) 0%, rgba(44, 66, 81, 0.16) 100%);
+}
+
+.genetics-hero-title {
+    text-shadow: 0 2px 18px rgba(0, 0, 0, 0.28);
+}
+
+/* Ensure banner heading does not inherit generic .card h2 dark styles */
+.card.hero-genetics .genetics-hero-title {
+    color: #FFFFFF;
+    display: block;
+    margin: 0;
+    text-align: center;
+    line-height: 1.2;
+    text-shadow: 0 3px 20px rgba(0, 0, 0, 0.45);
+}
+
+.genetics-stat-card {
+    border-radius: 10px;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 3px solid rgba(44, 66, 81, 0.45);
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+@media (max-width: 900px) {
+    .nav-container {
+        gap: 0.35rem;
+    }
+
+    .card {
+        padding: 1.8rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .card {
+        border-radius: 10px;
+        padding: 1.35rem;
+    }
+
+    .card h2 {
+        font-size: 1.55rem;
+        line-height: 1.3;
+    }
 }
 
