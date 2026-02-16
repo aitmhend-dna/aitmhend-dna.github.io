@@ -15,6 +15,19 @@
       <image:caption>Geographic distribution of the E-M81 "Berber Marker" showing concentration in Maghreb region</image:caption>
     </image:image>
   </url>
+
+  <!-- Start Here Page -->
+  <url>
+    <loc>https://aitmhend-dna.github.io/start-here.html</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://aitmhend-dna.github.io/img/hero-dna-morocco.jpg</image:loc>
+      <image:title>Start Here - Amazigh Lineage Heritage</image:title>
+      <image:caption>Guided entry page with three reading routes for first-time visitors</image:caption>
+    </image:image>
+  </url>
   
   <!-- Complete Lineage Analysis -->
   <url>
