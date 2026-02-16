@@ -6,12 +6,12 @@ A comprehensive digital presentation of an Amazigh lineage from the Souss-Massa 
 
 ## 🌐 Live Site
 
-Visit: [aitmhend-dna.github.io](https://aitmhend-dna.github.io/)
+Visit: [northafricanorigins.com](https://northafricanorigins.com/)
 
 ## 📁 Project Structure
 
 ```
-aitmhend-dna.github.io/
+northafricanorigins.com/
 ├── index.html              # Homepage with genetic overview
 ├── lineage.html           # Detailed lineage analysis
 ├── genetics.html          # DNA science and methodology
@@ -75,7 +75,7 @@ The research centers on the **Souss-Massa region** of Morocco, specifically:
 
 ## Live Website
 
-Visit: **https://aitmhend-dna.github.io**
+Visit: **https://northafricanorigins.com**
 
 ---
 

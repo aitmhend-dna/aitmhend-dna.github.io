@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Static genealogy/cultural heritage website hosted on GitHub Pages documenting Amazigh (Berber) genetic lineage from Souss-Massa, Morocco. Combines genetic analysis (Y-DNA haplogroup E-PF2546, mtDNA H1-T16189C!), historical research on the Chtouka confederation, and cultural preservation.
 
-**Live site:** https://aitmhend-dna.github.io
+**Live site:** https://northafricanorigins.com
 
 ## Development
 
