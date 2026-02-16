@@ -4103,6 +4103,35 @@ select:focus {
     color: #8B4513;
 }
 
+.glossary-intro-card {
+    margin-bottom: 2rem;
+    border-top: 3px solid transparent;
+    border-image: linear-gradient(90deg, #CD7F32 0%, #CC8E35 50%, #D2691E 100%) 1;
+}
+
+.glossary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.glossary-term-card {
+    border-top: 3px solid #CD7F32;
+}
+
+.glossary-term-title {
+    margin: 0 0 0.6rem;
+    color: #3E2723;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.glossary-term-copy {
+    margin: 0;
+    color: #4B5563;
+    line-height: 1.75;
+}
+
 /* ========================================
    ARTICLE PAGE COMPONENTS
    ======================================== */

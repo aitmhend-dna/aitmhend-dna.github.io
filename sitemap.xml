@@ -28,6 +28,19 @@
       <image:caption>Guided entry page with three reading routes for first-time visitors</image:caption>
     </image:image>
   </url>
+
+  <!-- Glossary Page -->
+  <url>
+    <loc>https://aitmhend-dna.github.io/glossary.html</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://aitmhend-dna.github.io/img/genetic-tree.jpg</image:loc>
+      <image:title>Glossary - Amazigh Genetics Terms</image:title>
+      <image:caption>Definitions of haplogroup, TMRCA, aDNA, mtDNA, and Y-DNA</image:caption>
+    </image:image>
+  </url>
   
   <!-- Complete Lineage Analysis -->
   <url>
