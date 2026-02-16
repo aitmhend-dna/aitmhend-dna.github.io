@@ -85,7 +85,7 @@ The site demonstrates **strong foundational SEO** with comprehensive meta tags, 
 
 **Issue 1.1.4: Missing Language Alternates**
 - **Status:** hreflang tags point to same URL
-- **Current:** `<link rel="alternate" hreflang="ar" href="https://aitmhend-dna.github.io/">`
+- **Current:** `<link rel="alternate" hreflang="ar" href="https://northafricanorigins.com/">`
 - **Impact:** Low - No Arabic version exists
 - **Recommendation:**
   - Remove hreflang if no alternate language versions exist
