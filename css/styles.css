@@ -110,6 +110,15 @@ header::before {
     text-align: center;
 }
 
+.header-content::before {
+    content: '';
+    display: block;
+    width: clamp(56px, 7vw, 72px);
+    height: clamp(56px, 7vw, 72px);
+    margin: 0 auto 0.75rem;
+    background: url('../img/site-logo-amazigh-96.png') center / contain no-repeat;
+}
+
 .header-content h1 {
     font-family: 'Space Grotesk', sans-serif;
     font-size: clamp(1.5rem, 3vw, 2rem);
@@ -5121,4 +5130,3 @@ select:focus-visible {
         line-height: 1.3;
     }
 }
-
