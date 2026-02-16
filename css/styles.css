@@ -4109,6 +4109,16 @@ select:focus {
     color: #CD7F32;
 }
 
+.paper-badge-ochre {
+    background: rgba(204, 142, 53, 0.12);
+    color: #CC8E35;
+}
+
+.paper-badge-clay {
+    background: rgba(210, 105, 30, 0.12);
+    color: #D2691E;
+}
+
 .paper-badge-sienna {
     background: rgba(139, 69, 19, 0.12);
     color: #8B4513;
@@ -4163,14 +4173,42 @@ select:focus {
     border: 1px solid #CD7F32;
 }
 
+.paper-doi-ochre {
+    color: #CC8E35;
+    border: 1px solid #CC8E35;
+}
+
+.paper-doi-clay {
+    color: #D2691E;
+    border: 1px solid #D2691E;
+}
+
 .paper-doi-sienna {
     color: #8B4513;
     border: 1px solid #8B4513;
 }
 
+.paper-card-ochre {
+    border-top: 3px solid #CC8E35;
+}
+
+.paper-card-clay {
+    border-top: 3px solid #D2691E;
+}
+
 .takeaways-copper {
     border-left: 3px solid #CD7F32;
     background: linear-gradient(to right, rgba(205, 127, 50, 0.04), transparent);
+}
+
+.takeaways-ochre {
+    border-left: 3px solid #CC8E35;
+    background: linear-gradient(to right, rgba(204, 142, 53, 0.04), transparent);
+}
+
+.takeaways-clay {
+    border-left: 3px solid #D2691E;
+    background: linear-gradient(to right, rgba(210, 105, 30, 0.04), transparent);
 }
 
 .takeaways-sienna {
@@ -4586,12 +4624,6 @@ body {
         radial-gradient(circle at 12% 12%, rgba(205, 127, 50, 0.07), transparent 34%),
         radial-gradient(circle at 88% 8%, rgba(44, 66, 81, 0.08), transparent 30%),
         #F7F8FA;
-}
-
-.main-nav {
-    background: rgba(255, 255, 255, 0.92);
-    border-bottom: 1px solid rgba(17, 24, 39, 0.08);
-    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
 }
 
 .nav-container a {
