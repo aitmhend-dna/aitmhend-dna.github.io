@@ -131,6 +131,14 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- Maps & Sites Page -->
+  <url>
+    <loc>https://aitmhend-dna.github.io/maps-sites.html</loc>
+    <lastmod>2026-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- Contact Page -->
   <url>
     <loc>https://aitmhend-dna.github.io/contact.html</loc>
