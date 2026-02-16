@@ -110,11 +110,30 @@
             <p class="research-intro-copy">Summaries of key peer-reviewed publications that advance our understanding of Amazigh (Berber) genetic heritage, ancient DNA from the Maghreb, and population dynamics across North Africa.</p>
         </section>
 
+        <section class="card research-controls-card" aria-label="Research filters and sorting">
+            <div class="research-controls-row">
+                <div class="research-filter-group" role="group" aria-label="Filter by category">
+                    <button type="button" class="research-filter-btn is-active" data-filter="all">All</button>
+                    <button type="button" class="research-filter-btn" data-filter="ancient-dna">Ancient DNA</button>
+                    <button type="button" class="research-filter-btn" data-filter="y-dna">Y-DNA</button>
+                    <button type="button" class="research-filter-btn" data-filter="mt-dna">mtDNA</button>
+                </div>
+                <label class="research-sort-label" for="research-sort">
+                    Sort
+                    <select id="research-sort" class="research-sort-select" aria-label="Sort research cards">
+                        <option value="newest">Newest</option>
+                        <option value="oldest">Oldest</option>
+                        <option value="cited">Most cited</option>
+                    </select>
+                </label>
+            </div>
+        </section>
+
         <!-- Research Cards Grid -->
-        <div class="discovery-grid discovery-grid-spaced">
+        <div class="discovery-grid discovery-grid-spaced" id="research-discovery-grid">
 
             <!-- Card 1: Salem et al. 2025 -->
-            <a href="research/green-sahara-ancient-dna-2025.html" class="discovery-card discovery-card-plain discovery-card-copper">
+            <a href="research/green-sahara-ancient-dna-2025.html" class="discovery-card discovery-card-plain discovery-card-copper" data-category="ancient-dna" data-date="2025-01" data-citations="40">
                 <img
                     src="img/research/green-sahara-takarkori-rock-shelter-nature-2025.jpg"
                     alt="Takarkori rock shelter in southwestern Libya"
@@ -135,7 +154,7 @@
             </a>
 
             <!-- Card 2: Colombo et al. 2025 -->
-            <a href="research/north-african-mitogenomes-2025.html" class="discovery-card discovery-card-plain discovery-card-ochre">
+            <a href="research/north-african-mitogenomes-2025.html" class="discovery-card discovery-card-plain discovery-card-ochre" data-category="mt-dna" data-date="2025-01" data-citations="22">
                 <div class="discovery-card-head">
                     <span class="discovery-tag discovery-tag-ochre">Mitochondrial DNA</span>
                     <span class="discovery-date">Jan 2025</span>
@@ -149,7 +168,7 @@
             </a>
 
             <!-- Card 3: Villalba-Mouco et al. 2023 -->
-            <a href="research/neolithic-iberia-morocco-2023.html" class="discovery-card discovery-card-plain discovery-card-clay">
+            <a href="research/neolithic-iberia-morocco-2023.html" class="discovery-card discovery-card-plain discovery-card-clay" data-category="ancient-dna" data-date="2023-06" data-citations="180">
                 <div class="discovery-card-head">
                     <span class="discovery-tag discovery-tag-clay">Ancient DNA</span>
                     <span class="discovery-date">Jun 2023</span>
@@ -163,7 +182,7 @@
             </a>
 
             <!-- Card 4: D'Atanasio et al. 2018 -->
-            <a href="research/e-m183-recent-origin-2018.html" class="discovery-card discovery-card-plain discovery-card-sienna">
+            <a href="research/e-m183-recent-origin-2018.html" class="discovery-card discovery-card-plain discovery-card-sienna" data-category="y-dna" data-date="2017-11" data-citations="240">
                 <div class="discovery-card-head">
                     <span class="discovery-tag discovery-tag-sienna">Y-Chromosome</span>
                     <span class="discovery-date">Nov 2017</span>
@@ -195,6 +214,67 @@
         <p>&copy; 2026 Amazigh Lineage Heritage Project | Preserving Chtouka heritage of the Souss-Massa</p>
     </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const grid = document.getElementById('research-discovery-grid');
+            if (!grid) return;
+
+            const cards = Array.from(grid.querySelectorAll('.discovery-card'));
+            const filterButtons = Array.from(document.querySelectorAll('.research-filter-btn'));
+            const sortSelect = document.getElementById('research-sort');
+
+            let activeFilter = 'all';
+            let activeSort = 'newest';
+
+            function parseDateValue(dateStr) {
+                // Normalize YYYY-MM into comparable integer YYYYMM.
+                return Number(String(dateStr || '').replace('-', '')) || 0;
+            }
+
+            function applyResearchControls() {
+                const filtered = cards.filter(function (card) {
+                    return activeFilter === 'all' || card.dataset.category === activeFilter;
+                });
+
+                filtered.sort(function (a, b) {
+                    if (activeSort === 'oldest') {
+                        return parseDateValue(a.dataset.date) - parseDateValue(b.dataset.date);
+                    }
+                    if (activeSort === 'cited') {
+                        return (Number(b.dataset.citations) || 0) - (Number(a.dataset.citations) || 0);
+                    }
+                    return parseDateValue(b.dataset.date) - parseDateValue(a.dataset.date);
+                });
+
+                cards.forEach(function (card) {
+                    card.style.display = 'none';
+                });
+
+                filtered.forEach(function (card) {
+                    card.style.display = '';
+                    grid.appendChild(card);
+                });
+            }
+
+            filterButtons.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    activeFilter = btn.dataset.filter || 'all';
+                    filterButtons.forEach(function (b) { b.classList.remove('is-active'); });
+                    btn.classList.add('is-active');
+                    applyResearchControls();
+                });
+            });
+
+            if (sortSelect) {
+                sortSelect.addEventListener('change', function () {
+                    activeSort = sortSelect.value || 'newest';
+                    applyResearchControls();
+                });
+            }
+
+            applyResearchControls();
+        });
+    </script>
 </body>
 </html>
 
