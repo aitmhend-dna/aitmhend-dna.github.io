@@ -63,7 +63,7 @@
   <!-- Genetics Revolution Page -->
   <url>
     <loc>https://northafricanorigins.com/genetics.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -89,7 +89,7 @@
   <!-- Research Blog Page -->
   <url>
     <loc>https://northafricanorigins.com/research.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -111,6 +111,24 @@
   <url>
     <loc>https://northafricanorigins.com/research/north-african-mitogenomes-2025.html</loc>
     <lastmod>2026-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+
+
+  <!-- Research Article: Punic Genetic Diversity -->
+  <url>
+    <loc>https://northafricanorigins.com/research/punic-genetic-diversity-2025.html</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Research Article: North Africa Maternal Diversity -->
+  <url>
+    <loc>https://northafricanorigins.com/research/north-africa-maternal-diversity-2026.html</loc>
+    <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
