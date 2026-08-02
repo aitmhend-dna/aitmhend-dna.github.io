@@ -43,11 +43,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const toc = document.createElement('section');
     toc.className = 'card toc-card';
     toc.setAttribute('aria-label', 'Table of contents');
-    toc.classList.add('is-collapsed');
     toc.innerHTML = [
         '<div class="toc-header">',
         '<h3 class="toc-title">On This Page</h3>',
-        '<button type="button" class="toc-toggle" aria-expanded="false">Show sections</button>',
+        '<button type="button" class="toc-toggle" aria-expanded="true">Hide sections</button>',
         '</div>',
         '<ol class="toc-list"></ol>'
     ].join('');
@@ -85,9 +84,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (tocToggle) {
         tocToggle.addEventListener('click', function () {
-            const isCollapsed = toc.classList.toggle('is-collapsed');
-            tocToggle.textContent = isCollapsed ? 'Show sections' : 'Hide sections';
-            tocToggle.setAttribute('aria-expanded', String(!isCollapsed));
+            const isExpanded = tocToggle.getAttribute('aria-expanded') === 'true';
+            toc.classList.toggle('is-collapsed', isExpanded);
+            tocToggle.textContent = isExpanded ? 'Show sections' : 'Hide sections';
+            tocToggle.setAttribute('aria-expanded', String(!isExpanded));
         });
     }
 
