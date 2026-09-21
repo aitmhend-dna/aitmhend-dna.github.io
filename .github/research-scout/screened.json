@@ -504,6 +504,14 @@
       "date": "2026-06-09",
       "screened": "2026-09-10"
     },
+    "10.1093/hmg/ddag087": {
+      "decision": "reject",
+      "reason": "Clinical genetics of APOL1 protein levels and chronic kidney disease risk in UK Biobank participants, not the population history of North Africa.",
+      "title": "Coding, modifier, and regulatory effects shape circulating APOL1 levels",
+      "journal": "Human Molecular Genetics",
+      "date": "2026-09-18",
+      "screened": "2026-09-21"
+    },
     "10.1093/infdis/jiaf437": {
       "decision": "reject",
       "reason": "Pathogen genomics: population structure of Escherichia coli in northern Tanzania.",
