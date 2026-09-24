@@ -1,15 +1,10 @@
 # Design system
 
-This file used to hold 471 lines of design rules that contradicted
-.github/copilot-instructions.md, CLAUDE.md and the actual stylesheet on nearly
-every decision — blue, the primary accent, buttons, card backgrounds, radius and
-emoji. That disagreement is why the site was built inconsistently.
-
-There is now one source of truth:
+Design rules have one source of truth:
 
     DESIGN.md
 
-Read it before changing any styling. Do not restate its rules here — a second
-copy is how the contradictions started.
+Read it before changing any styling. Keep its rules there only: separate copies
+drift apart and contradict the stylesheet.
 
 Project context lives in CLAUDE.md.
