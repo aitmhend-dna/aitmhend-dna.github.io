@@ -120,6 +120,14 @@
       "date": "2026-01-31",
       "screened": "2026-09-16"
     },
+    "10.1007/s10689-026-00602-y": {
+      "decision": "reject",
+      "reason": "Clinical cancer genetics: a recurrent MSH2 variant causing Lynch syndrome in Iraqi/Chaldean patients, not population history.",
+      "title": "A frequently occurring MSH2 variant in Iraqi and Chaldean patients with Lynch syndrome: evidence for a putative founder variant",
+      "journal": "Familial Cancer",
+      "date": "2026-09-27",
+      "screened": "2026-09-28"
+    },
     "10.1007/s10903-026-01944-6": {
       "decision": "reject",
       "reason": "Survey analysis of disability among Middle East and North Africa ancestry adults in the United States, with no genetic data.",
@@ -920,6 +928,14 @@
       "date": "2026-06-24",
       "screened": "2026-09-10"
     },
+    "10.1371/journal.pone.0358751": {
+      "decision": "reject",
+      "reason": "Non-human study of genetic diversity in maize inbred lines for hybrid breeding in sub-Saharan Africa.",
+      "title": "Genetic diversity and population structure of early-maturing yellow and orange maize inbred lines for improved breeding applications",
+      "journal": "PLOS One",
+      "date": "2026-09-25",
+      "screened": "2026-09-28"
+    },
     "10.1590/1678-4685-gmb-2024-0147": {
       "decision": "reject",
       "reason": "Clinical genetics of TSHR polymorphisms in congenital hypothyroidism patients.",
@@ -1055,6 +1071,14 @@
       "journal": "Life",
       "date": "2025-12-16",
       "screened": "2026-09-16"
+    },
+    "10.3390/v18091032": {
+      "decision": "reject",
+      "reason": "Non-human study of the population structure of a tomato virus in Morocco, not of people.",
+      "title": "Geographic Structuring of the Tomato Brown Rugose Fruit Virus Populations in Morocco",
+      "journal": "Viruses",
+      "date": "2026-09-17",
+      "screened": "2026-09-28"
     },
     "10.3390/vaccines14010027": {
       "decision": "reject",
