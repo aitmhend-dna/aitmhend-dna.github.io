@@ -104,6 +104,14 @@
       "date": "2025-11-18",
       "screened": "2026-09-16"
     },
+    "10.1007/s10048-026-00946-8": {
+      "decision": "reject",
+      "reason": "Scoping review of founder mutations causing inherited movement disorders, aimed at diagnosis, genetic counselling and precision therapy, so clinical disease genetics rather than population history, and its only North African mention is LRRK2/GBA1 Parkinson disease risk.",
+      "title": "Founder mutations in movement disorders: global distribution, molecular mechanisms, and clinical consequences—a scoping review",
+      "journal": "Neurogenetics",
+      "date": "2026-10-02",
+      "screened": "2026-10-05"
+    },
     "10.1007/s10528-026-11318-0": {
       "decision": "reject",
       "reason": "Non-human: genetic diversity of Tunisian tall fescue grass.",
@@ -975,6 +983,14 @@
       "journal": "Frontiers in Pharmacology",
       "date": "2026-08-25",
       "screened": "2026-09-10"
+    },
+    "10.3389/fphar.2026.1902530": {
+      "decision": "reject",
+      "reason": "Review of pharmacogenomics in the United Arab Emirates, covering drug-response variation in genes affecting warfarin, clopidogrel and statins plus barriers to clinical implementation, which is pharmacogenomic rather than migration or ancestry research.",
+      "title": "Pharmacogenomics in the United Arab Emirates: advances in population genomics and challenges in clinical implementation",
+      "journal": "Frontiers in Pharmacology",
+      "date": "2026-09-07",
+      "screened": "2026-10-05"
     },
     "10.3389/fpls.2025.1650532": {
       "decision": "reject",
